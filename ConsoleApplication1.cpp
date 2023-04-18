@@ -23,22 +23,21 @@ using namespace std; //namespace
   {
       setlocale(LC_ALL, "ru"); // russian language support
       srand(time(0)); //random numbers enable
-      cout << "Ïðîãðàììà ãåíåðèðóåò ìàññèâ ñëó÷àéíûõ öåëûõ ÷èñåë ðàçìåðíîñòüþ n è âûâîä íà ýêðàí âñå åãî ýëåìåíòû, êðàòíûå m.\n";
+      cout << "ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€ÑƒÐµÑ‚ Ð¼Ð°ÑÑÐ¸Ð² ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ñ… Ñ†ÐµÐ»Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ» Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒÑŽ n Ð¸ Ð²Ñ‹Ð²Ð¾Ð´ Ð½Ð° ÑÐºÑ€Ð°Ð½ Ð²ÑÐµ ÐµÐ³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹, ÐºÑ€Ð°Ñ‚Ð½Ñ‹Ðµ m.\n";
       int n, m;
-      cout << "Ââåäèòå n: ";
+      cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ n: ";
       cin >> n;
       cout << "\n";
-      cout << "Ââåäèòå m: ";
+      cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ m: ";
       cin >> m;
       cout << "\n";
       int *array = new int[n];
-      cout << "Ýëåìåíòû ìàññèâà, êðàòíûå " + to_string(m) + "(m):\n";
+      cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°, ÐºÑ€Ð°Ñ‚Ð½Ñ‹Ðµ " + to_string(m) + "(m):\n";
       for (int i = 0; i < ArrayHelp::GetLength(array); i++)
       {
           array[i] = 0 + rand() % n;
-          if (true)
+          if (array[i] % m == 0)
               cout << array[i] << " ";
       }
-      return 54;
-  }
-    
+      return 0;
+  }    
